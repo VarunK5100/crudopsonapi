@@ -1,0 +1,14 @@
+/* Add space between Review Dashboard text and the elements */
+div {
+    margin-top: 20px; /* Adjust the value as needed */
+}
+
+/* Optionally, add space between the list items */
+li {
+    margin-bottom: 20px; /* Adjust the value as needed */
+}
+
+/* Optionally, style the dropdown menu and text field */
+select, input {
+    margin-bottom: 10px; /* Adjust the value as needed */
+}
