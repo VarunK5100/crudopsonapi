@@ -83,16 +83,19 @@ const handleEditReview=(e)=>{
                 <br></br>
                 <br></br>
                 {/* Display individual review properties */}
-                <p>Username {review.username}</p>
-                {review_username=review.username}
-                <p>Review headline: {review.reviewHeadline}</p>
-                <p>Rating: {review.rating}</p>
-                <p>Comment: {review.review}</p>
+                
+              
+                <h2> {review.reviewHeadline}</h2>
+                <h3>{review.username}</h3>
+                <p>{review.rating}</p>
+                <p>{review.review}</p>
+            
                 
                 <button value={review._id} onClick={(e) => handleEditReview(e)}>Edit</button>
                 <button value={review._id} onClick={(e) => handleDeleteReview(e)}>
                   Delete
                 </button>
+                <br></br>
                 {/* Add more properties as needed */}
               </li>
             ))}

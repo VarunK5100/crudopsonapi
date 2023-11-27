@@ -100,9 +100,11 @@ const TotalReviewsDashboard=()=> {
   
   return (
     <div>
-
+        <link rel="stylesheet" type="text/css" href="reviewDashboard.css"></link>
       <label htmlFor="restaurantDropdown">Select Restaurant:</label>
-      <select id="restaurantDropdown" onChange={handleRestaurantChange} value={restaurants}>
+      
+      <select id="restaurantDropdown" onChange={handleRestaurantChange} value={restaurants} style={{ width: '480px',height: '40px' }} >
+      
         <option value="Pick Restaurant">Pick Restaurant</option>
         {uniqueRestaurantNames.map((restaurantName, index) => (
           <option key={index} value={restaurantName}>
@@ -112,7 +114,9 @@ const TotalReviewsDashboard=()=> {
       </select>
 
       <label htmlFor="ratingDropdown">Select Rating:</label>
-      <select id="ratingDropdown" onChange={handleRatingChange} value={ratings}>
+     
+      <select id="ratingDropdown" onChange={handleRatingChange} value={ratings} style={{ width: '480px',height: '40px' }}>
+      
         <option value="Pick Rating">Pick Rating</option>
         {uniqueRatings.map((rating, index) => (
           <option key={index} value={rating}>
@@ -127,13 +131,14 @@ const TotalReviewsDashboard=()=> {
             .map((review, index) => (
               <li key={index}>
                 {/* Display individual review properties */}
-                <p>Username {review.username}</p>
+              
                 
-                <p>Review headline: {review.reviewHeadline}</p>
-                <p>Rating: {review.rating}</p>
-                <p>Comment: {review.review}</p>
-                <p>id: {review._id}</p>
-               
+                <h2> {review.reviewHeadline}</h2>
+                <h3>{review.username}</h3>
+                <p>{review.rating}</p>
+                <p>{review.review}</p>
+                
+               <br></br>
                 {/* Add more properties as needed */}
               </li>
             ))}

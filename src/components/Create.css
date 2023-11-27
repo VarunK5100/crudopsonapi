@@ -20,6 +20,13 @@ input {
     box-sizing: border-box;
 }
 
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
 /* Style the button */
 button {
     background-color: #a8af4c; /* Green background color */

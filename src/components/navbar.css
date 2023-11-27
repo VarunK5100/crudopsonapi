@@ -1,0 +1,19 @@
+.navbar-nav {
+    list-style: none;
+    padding: 0; /* Optional: Remove default padding from the list */
+  }
+  
+  .nav-item {
+    display: inline-block; /* Display list items inline */
+    margin-right: 15px; /* Optional: Add spacing between list items */
+  }
+ 
+    h1 {
+      font-size: 4.5em;
+      margin-bottom: 20px;
+  }
+  
+  .collapse-navbar-collapse{
+    display: flex;
+    flex-direction: column;
+  }

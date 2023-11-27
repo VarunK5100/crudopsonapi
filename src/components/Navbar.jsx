@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Create from './create';
 import Login from './login';
 import TotalReviews from './totalReviewsDashboard';
+import './navbar.css'
 
 const Navbar = () => {
 
@@ -12,9 +13,10 @@ const Navbar = () => {
     return (
         
           <div>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+            <link rel="stylesheet" type="text/css" href="navbar.css"></link>
+            <nav className="navbar-nav">
               <div className="container-fluid">
-                <h4 className="navbar-brand">Restaurant Review System</h4>
+                <h1>Restaurant Review System</h1>
     
                 <div className="collapse navbar-collapse">
                   <ul className="navbar-nav me-auto mb-2 mb-lg-0 d-flex">
@@ -32,6 +34,12 @@ const Navbar = () => {
                       <Link to="/TotalReviews" className="nav-link">
                         All Restaurant Reviews
                       </Link>
+                    
+                    </li>
+                    <li className="nav-item">
+                      <Link to="/login" className="nav-link">
+                        Logout
+                    </Link>
                     </li>
                   </ul>
                 </div>

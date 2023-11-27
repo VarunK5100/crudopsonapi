@@ -93,9 +93,11 @@ fetch('https://smooth-comfort-405104.uc.r.appspot.com/document/findAll/resturant
   
 return(
   <div>
+    <link rel="stylesheet" type="text/css" href="reviewDashboard.css"></link>
   <h2>Write a Review</h2>
   <select
     id="ratingDropdown"
+    style={{ width: '480px',height: '40px' }}
     onChange={(e) => {
       getUserDataForReview(e);
       // Update the selected restaurant when the dropdown changes
@@ -134,7 +136,8 @@ return(
         ></input>
         <p></p>
   <button onClick={handleSubmitForReview}>Submit Review</button>
-  
+  <br></br>
+  <br></br>
   <Link to={"/reviewDashboard"}>review dashboard</Link>
 </div>
 );

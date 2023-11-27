@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ReviewDashboard from './components/reviewDashboard';
 import EditReviewPage from './components/editPage';
 import TotalReviewsDashboard from './components/totalReviewsDashboard';
+import Logout from './components/logout';
 function App() {
   return (
     <div className="App">
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/homepage" element={<Homepage/>}/>
           <Route exact path="/reviewDashboard" element ={<ReviewDashboard/>}/>
           <Route exact path="/editPage" element={<EditReviewPage/>}/>
+
         </Routes>
         
       </BrowserRouter>

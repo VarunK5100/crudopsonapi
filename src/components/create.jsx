@@ -49,7 +49,7 @@ const getUserData=(e)=>{
             
 
             <input
-                type="text"
+                type="password"
                 name="password"
                 placeholder="PASSWORD"
                 value={users.password}

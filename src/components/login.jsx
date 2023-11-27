@@ -11,6 +11,7 @@ import { isLoggedIn } from "../slices/userDetail";
 const Login = () => {
   const [users, setUsers] = useState({});
   const[loggedinUser, setLoggedInUser]=useState("");
+  const [error, setError]=useState("");
   const dispatch = useDispatch();
   const navigate=useNavigate();
   const getUserData=(e)=>{
@@ -32,7 +33,11 @@ const Login = () => {
     setLoggedInUser(users.username);
     //console.log(loggedinUser);
    navigate('/homepage');
-    }
+}
+   else{
+    setError('Incorrect username or password');
+   }
+    
   };
  
   return (
@@ -48,7 +53,7 @@ const Login = () => {
             <br></br>
             <br></br>
             <input
-                type="text"
+                type="password"
                 name="password"
                 placeholder="password"
                 value={users.password}
@@ -57,7 +62,7 @@ const Login = () => {
             <br></br>
             <br></br>
             <button onClick={handleSubmit}>Login</button>
-           
+            {error && <p style={{ color: 'red' }}>{error}</p>}
             <div>
     
      
